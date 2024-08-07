@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #232a34;
+    color: #fff;
+}
+
+.app {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Menu de navegação */
+header {
+    background-color: #5a49f3;
+    border-radius: 0 0 8px 8px;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 16px;
+}
+
+header a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: .3s;
+    padding-bottom: 4px;
+}
+
+header a:hover {
+    transform: scale(1.1);
+}
+
+header a.active {
+    border-bottom: 2px solid #fff;
+    transition: .8s;
+}
+
+/* Título principal da página */
+.area-title {
+    margin: 68px 0;
+}
+
+.area-title h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Sobre mim */
+.about-me .area-about-me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.about-me .wrapper-about-me {
+    background-color: #30353d;
+    padding: 40px;
+    border-radius: 8px;
+    word-wrap: break-word;
+}
+
+.about-me h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.about-me p {
+    line-height: 24px;
+    color: #d8d8d8;
+}
+
+/* Formação */
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.education .wrapper-infos {
+    background-color: #30353d;
+    border-radius: 8px;
+    padding: 40px;
+    word-wrap: break-word;
+}
+
+.education .wrapper-infos h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.education .wrapper-infos p {
+    color: #d3d3d3;
+}
+
+.education .wrapper-infos p span {
+    color: #fff;
+    font-size: 18px;
+}
+
+
+/* Portfólio */
+.portfolio img {
+    width: 100%;
+    padding: 0;
+    transition: .1s;
+    filter: brightness(90%);
+}
+
+.portfolio img:hover {
+    transform: scale(1.01);
+    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+}
+
+.portfolio .area-portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.portfolio .wrapper-project {
+    background-color: #30353d;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio .wrapper-project-infos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+}
+
+.portfolio .wrapper-project-infos h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.portfolio .wrapper-project-infos p {
+    flex: 1;
+    color: #d8d8d8;
+    line-height: 24px;
+}
+
+.portfolio .wrapper-project-infos a {
+    display: inline-block;
+    width: max-content;
+    text-decoration: none;
+    background-color: #5a49f3;
+    color: #fff;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    transition: .2s;
+}
+
+.portfolio .wrapper-project-infos a:hover {
+    background-color: #4c3dc1;
+    color: #fff;
+}
+
+/* Contato */
+.contact .wrapper-contact-infos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.contact .phone-number,
+.contact .email-contact {
+    background-color: #30353d;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 8px;
+}
+
+.contact h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #d3d3d3;
+    transition: .2s;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+}
+
+.contact a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.contact form {
+    margin: 40px auto 0;
+    max-width: 720px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact form input,
+.contact form textarea,
+.contact button {
+    border: none;
+    background-color: #30353d;
+    color: #fff;
+    padding: 20px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 4px;
+}
+
+.contact form textarea {
+    height: 124px;
+    resize: none;
+}
+
+.contact button {
+    background-color: #5a49f3;
+    transition: .2s;
+}
+
+.contact button:hover {
+    cursor: pointer;
+    background-color: #4537cc;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: 2px solid #867ae9;
+}
+
+header .menu-mobile {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    height: 108px;
+    padding: 16px;
+}
+
+header .menu-mobile img {
+    cursor: pointer;
+}
+
+/* Responsividade menu */
+@media (max-width: 595px) {
+    header nav {
+        position: relative;
+    }
+
+    header ul {
+        display: none;
+        background-color: #5a49f3;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    header ul li {
+        width: 100%;
+        text-align: center;
+        padding: 24px 0;
+        border-top: 2px solid #867ae9;
+    }
+
+    header ul li:last-child {
+        border-bottom: 2px solid #867ae9;
+    }
+
+    header .menu-mobile {
+        display: flex;
+    }
+}
+
+/* Respoosividade Sobre mim */
+@media (max-width: 964px) {
+    .about-me .area-about-me {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsividade contato */
+@media (max-width: 595px) {
+    .contact .wrapper-contact-infos {
+        grid-template-columns: 1fr;
+    }
+
+    .contact .phone-number,
+    .contact .email-contact {
+        padding: 16px 0;
+        word-break: break-word;
+    }
+}
+
+/* Responsividade portfólio */
+@media (max-width: 1150px) {
+    .portfolio .area-portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 795px) {
+    .portfolio .area-portfolio {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsividade ajustes gerais */
+@media (max-width: 595px) {
+    .education .wrapper-infos,
+    .about-me .wrapper-about-me {
+        padding: 20px;
+    }
+
+    .app {
+        padding: 0 8px;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal - Contato</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./icons/phone.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Sobre mim</a></li>
+                    <li><a href="./formacao.html">Formação acadêmica</a></li>
+                    <li><a href="./portfolio.html">Portfólio</a></li>
+                    <li><a href="./contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-mobile">
+                <img src="./icons/menu-mobile.svg" alt="Ícone do menu de navegação">
+            </div>
+        </header>
+
+        <section class="area-title">
+            <h1>Fale Comigo</h1>
+        </section>
+
+        <main class="contact">
+            <div class="wrapper-contact-infos">
+                <div class="phone-number">
+                    <img src="./icons/phone.svg" alt="Ícone de um telefone">
+                    <h2>Celular</h2>
+                    <a href="tel:+5519989030894">+55 (19) 98903-0894</a href="">
+                </div>
+                <div class="email-contact">
+                    <img src="./icons/email.svg" alt="Ícone de um e-mail">
+                    <h2>E-mail</h2>
+                    <a href="mailto:viniciusmansano12@gmail.com">viniciusmansano12@gmail.com</a href="">
+                </div>
+            </div>
+
+            <form>
+                <input type="text" name="name" placeholder="Nome" autofocus>
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="text" name="title" placeholder="Título">
+                <textarea name="message" placeholder="Sua mensagem" maxlength="300"></textarea>
+                <button>Enviar</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
